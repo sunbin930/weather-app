@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import image from "./assets/background1.jpeg";
+import BackgroundImage from "./components/BackgroundImage";
+import WeatherPage from "./pages/WeatherPage";
 
-function App() {
+const BackgroundImg = styled(BackgroundImage)`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BackgroundImg src={image}>
+      <WeatherPage />
+    </BackgroundImg>
   );
-}
+};
 
 export default App;
